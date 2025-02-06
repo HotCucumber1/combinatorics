@@ -38,11 +38,11 @@ int main(int argc, char* args[])
     auto endTime = std::chrono::high_resolution_clock::now();
     auto time = (endTime - startTime).count();
 
-    std::cout << "Время выполнения: " << time / SECONDS << std::endl << std::endl;
+    std::cout << "Время выполнения: " << time / SECONDS << " секунд" << std::endl << std::endl;
     std::cout << "Время выполнения для 20 элементов: "
-              << calculateTime(time, 20, distances.size()) << std::endl;
+              << calculateTime(time, 20, distances.size())<< " лет"<< std::endl;
     std::cout << "Время выполнения для 50 элементов: "
-              << calculateTime(time, 50, distances.size()) << std::endl;
+              << calculateTime(time, 50, distances.size()) << " лет" << std::endl;
 }
 
 
