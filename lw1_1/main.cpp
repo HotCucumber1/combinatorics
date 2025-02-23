@@ -9,8 +9,8 @@
 #include <chrono>
 
 
-const double SECONDS = 1000000000;
-const long YEARS = SECONDS * 3600 * 24 * 365;
+const double NANO_IN_SECOND = 1000000000;
+const long YEARS = NANO_IN_SECOND * 3600 * 24 * 365;
 
 
 void assertInputValid(int fileCount);
@@ -38,7 +38,7 @@ int main(int argc, char* args[])
     auto endTime = std::chrono::high_resolution_clock::now();
     auto time = (endTime - startTime).count();
 
-    std::cout << "Время выполнения: " << time / SECONDS << " секунд" << std::endl << std::endl;
+    std::cout << "Время выполнения: " << time / NANO_IN_SECOND << " секунд" << std::endl << std::endl;
     std::cout << "Время выполнения для 20 элементов: "
               << calculateTime(time, 20, distances.size())<< " лет"<< std::endl;
     std::cout << "Время выполнения для 50 элементов: "
