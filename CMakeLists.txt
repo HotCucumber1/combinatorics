@@ -12,3 +12,4 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Catch2)
 
 add_subdirectory(lw2)
+add_subdirectory(lw3)
